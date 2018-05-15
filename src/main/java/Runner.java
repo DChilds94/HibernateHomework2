@@ -19,8 +19,11 @@ public class Runner {
         DBHelper.save(file1);
         DBHelper.save(file2);
         DBHelper.save(file3);
+        DBHelper.delete(file3);
 
         List<Folder> folders = DBHelper.getAll(Folder.class);
-
+        List<File>  files = DBHelper.getAll(File.class);
+        File foundFile = DBHelper.find(File.class, file1.getId());
+        Folder foundFolder = DBHelper.find(Folder.class, folder1.getId());
     }
 }
