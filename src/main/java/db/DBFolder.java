@@ -22,7 +22,7 @@ public class DBFolder {
         List<File> result = null;
         try {
             Criteria cr = session.createCriteria(File.class);
-            cr.add(Restrictions.eq("Folder", folder));
+            cr.add(Restrictions.eq("folder", folder));
             result = cr.list();
 
         } catch (HibernateException e){
