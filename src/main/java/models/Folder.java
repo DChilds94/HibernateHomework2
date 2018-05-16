@@ -12,12 +12,10 @@ public class Folder {
 
     public Folder(String title) {
         this.title = title;
-
     }
 
     public Folder(){
     }
-
 
     @Id()
     @GeneratedValue(strategy = GenerationType.IDENTITY)

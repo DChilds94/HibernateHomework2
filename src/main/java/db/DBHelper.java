@@ -63,6 +63,7 @@ public class DBHelper {
             session.delete(object);
             transaction.commit();
             } catch (Exception e) {
+            transaction.rollback();
                 e.printStackTrace();
             } finally {
         } session.close();
